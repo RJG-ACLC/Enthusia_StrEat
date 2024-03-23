@@ -387,3 +387,43 @@ a {
   background-color: white;
   color: orange;
 }
+
+/* PRODUCT CSS */
+
+.title-product {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.fruitshake {
+  padding: 20px 40px 20px 40px;
+  background-color: orange;
+  position: absolute;
+  border-radius: 15px;
+  text-decoration: none;
+  margin-top: 70px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.burger {
+  padding: 20px 55px 20px 55px;
+  background-color: orange;
+  position: absolute;
+  border-radius: 15px;
+  text-decoration: none;
+  margin-top: 140px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.sandwich {
+  padding: 20px 19px 20px 19px;
+  background-color: orange;
+  position: absolute;
+  border-radius: 15px;
+  text-decoration: none;
+  margin-top: 210px;
+  margin-left: 10px;
+  font-weight: bold;
+}
