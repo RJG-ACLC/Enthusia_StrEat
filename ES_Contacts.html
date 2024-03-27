@@ -8,9 +8,378 @@
     <link rel="shortcut icon" type="image/x-icon" href="https://lh3.googleusercontent.com/pw/ABLVV86axSATTNLcLZp-KHmWkKr05Ct9PqfRL9R6Tj9-NISNOS_tp5TQkgbvljhddmDIHAzSTP40fl0CQ-n-j12N0RZvWcocaMaL9ybspzvvI3FW290LptM=w2400" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-    <link rel="stylesheet" href="ES_Home_CSS.css">
     <script src="//code.jivosite.com/widget/rYDIQLhVdz" async></script>
     <title> 🍔 Enthusia StrEat - Contact Us 🍔  </title>
+    <style>
+        *  {
+  box-sizing: border-box;
+}
+
+body { 
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+/* -------------------------------------------------------------------------NAVIGATION------------------------------------------------------------------------- */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFCE32;
+  color: #ffffff;
+}
+
+.logo {
+  font-size: 20px;
+  margin: 10px;
+  font-family: 'Brush Script MT', cursive;
+}
+.logo a {
+  text-decoration: none;
+  color: #ffffff;
+  margin-left: 20px;
+}
+.navbar-links ul {
+  margin: 0px 10px;
+  padding: 0px;
+  display: flex;
+}
+.navbar-links ul li {
+  list-style: none;
+}
+.navbar-links ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 20px;
+  display: block;
+}
+.navbar-links ul li a:hover {
+  background: #ffffff;
+  color: #000000;
+}
+.togglebtn {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+.line {
+  height: 3px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 850px) {
+  .togglebtn {
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar-links ul li {
+    text-align: center;
+  }
+  .navbar-links ul li a {
+    padding: 16px;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
+/* -------------------------------------------------------------------------NAVIGATION -------------------------------------------------------------------------*/
+
+/* -------------------------------------------------------------------------CONTACT CSS------------------------------------------------------------------------- */
+
+label{
+  font-weight: bold;
+}
+
+.contact-head {
+  text-align: center;
+}
+
+.contact-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.contact-container h1{
+  text-align: center;
+}
+
+.left{
+  background-color: #5358B3;
+  border-radius: 20px;
+  padding: 40px 40px 100px 40px;
+  color: #fff;
+}
+
+.right{
+  padding: 40px 40px 100px 40px;
+}
+
+.fill {
+  width: 200%;
+}
+
+.fillup form input[type=text], input,
+.fillup form input[type=text], select{
+  width:100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border:none;
+  background-color: #6a6fc9;
+  display: block;
+  grid-template-columns: repeat(2, 1fr);
+  border-bottom: 1px solid #7a7fe2;
+  border-radius: 20px;
+  color: #fff;
+}
+
+form#subject input[type=text], select{
+  color: #fff;
+}
+
+.submit{
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  background-color: #49D8B9;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  transition: background-color 500000s;
+  -webkit-text-fill-color: #fff !important;
+}
+
+.indicator{
+  margin-bottom: -5px;
+}
+
+.fa.fa-envelope-o{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+}
+
+.fa{
+  display: inline-block;
+  font: normal normal normal 14px / 1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.right a{
+  text-decoration: none;
+  font-style: italic;
+}
+
+/* -------------------------------------------------------------------------CONTACT CSS------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------FOOTER------------------------------------------------------------------------- */
+
+.footer {
+  background: #FFCE32;
+  width: 100%;
+  text-align: left;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 50px;
+}
+
+.footer .footer-left,
+.footer .footer-center,
+.footer .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+/* footer left*/
+
+.footer .footer-left {
+  width: 33%;
+  padding-right: 15px;
+}
+
+.footer .about {
+  line-height: 20px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer .about span {
+  display: block;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer .icons {
+  margin-top: 25px;
+}
+
+.footer .icons a {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 45px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+
+/* footer center*/
+
+.footer .footer-center {
+  width: 31%;
+}
+
+.footer .footer-center i {
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 25px;
+  vertical-align: middle;
+}
+
+.footer .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer .footer-center p {
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.footer .footer-center p a {
+  color: #0099ff;
+  text-decoration: none;
+}
+
+
+/* footer right*/
+
+.footer .footer-right {
+  width: 35%;
+}
+
+.footer h2 {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: normal;
+  margin: 0;
+  font-family: 'Brush Script MT', cursive;
+
+}
+
+.footer h2 span {
+  color: #0099ff;
+  font-family: 'Brush Script MT', cursive;
+
+}
+
+.footer .menu {
+  color: #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer .menu a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer .menu a:hover {
+  color: #0099ff;
+}
+
+.footer .name {
+  color: #0099ff;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .footer {
+    font-size: 14px;
+  }
+  .footer .footer-left,
+  .footer .footer-center,
+  .footer .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .footer .footer-center i {
+    margin-left: 0;
+  }
+}
+
+/* -------------------------------------------------------------------------FOOTER------------------------------------------------------------------------- */
+    </style>
   </head>
 
   <body>
@@ -108,7 +477,7 @@
 
                 <div>
                     <i class="fa fa-envelope"></i>
-                    <p><a href="#"> https://www.facebook.com/enthusia.streat</a></p>
+                    <p><a href="https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcRzDQqQnZPDFFpldRcNKCGcTHWHVLwfJQHnMtLfvSHMWChWDfnbGmHzcKvbrdpftzQxSbrJM">leannaelsantos8520@gmail.com</a></p>
                 </div>
             </div>
             <div class="footer-right col-md-4 col-sm-6">
