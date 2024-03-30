@@ -77,6 +77,11 @@ a {
   border-radius: 10px;
 }
 
+.active {
+  background-color: black;
+  color: white;
+}
+
 @media only screen and (max-width: 850px) {
   .togglebtn {
     display: flex;
@@ -327,11 +332,11 @@ a {
             <ul>
 
               <li><a href="/ES_Home.html">HOME</a></li>
-              <li><a href="/ES_Story.html">OUR STORY</a></li>
-              <li><a href="/ES_Products.html">PRODUCTS</a></li>
-              <li><a href="/ES_Location.html">LOCATIONS</a></li>
+              <li><a class="active" href="/ES_Story.html">OUR STORY</a></li>
+              <li><a href="/ES_Fruitshakes.html">PRODUCTS</a></li>
+              <li><a href="/ES_Location.html">LOCATION</a></li>
               <li><a href="/ES_Contacts.html">CONTACT US</a></li>
-              <li><a href="#">FAQ</a></li>
+              <li><a href="/ES_FAQ.html">FAQ</a></li>
 
             </ul>
           </div>
@@ -380,7 +385,7 @@ a {
   <footer class="footer">
     <div class="footer-left col-md-4 col-sm-6">
       <p class="about">
-        <span> About the company</span> Welcome to Enthusia_StrEat, your ultimate destination for a mouthwatering journey through
+        <span style="color: #0099ff;">About our shop</span> Welcome to Enthusia_StrEat, your ultimate destination for a mouthwatering journey through
         the world of burgers, hotdogs, shakes, and an array of delectable sides. We're not just a food stop;
         We're a flavor-packed adventure waiting to delight your taste buds.
       </p>
@@ -413,12 +418,12 @@ a {
   <div class="footer-right col-md-4 col-sm-6">
     <h2> Enthusia <span> StrEat </span></h2>
     <p class="menu">
-    <a href="#"> HOME</a> |
-    <a href="#"> OUR STORY</a> |
-    <a href="#"> MENU</a> |
-    <a href="#"> LOCATIONS</a> |
-    <a href="#"> CONTACT US</a> |
-    <a href="#"> FAQ</a>
+    <a href="/ES_Home.html">HOME</a> |
+    <a href="/ES_Story.html">OUR STORY</a> |
+    <a href="/ES_Fruitshakes.html">PRODUCTS</a> |
+    <a href="/ES_Location.html">LOCATION</a> |
+    <a href="/ES_Contacts.html">CONTACT US</a> |
+    <a href="/ES_FAQ.html">FAQ</a>
     </p>
     <p class="name"> Enthusia StrEat &copy; 2020</p>
   </div>

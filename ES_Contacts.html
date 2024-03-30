@@ -79,6 +79,11 @@ a {
   border-radius: 10px;
 }
 
+.active {
+  background-color: black;
+  color: white;
+}
+
 @media only screen and (max-width: 850px) {
   .togglebtn {
     display: flex;
@@ -207,6 +212,12 @@ input:-webkit-autofill:active  {
   font-style: italic;
 }
 
+@media screen and (max-width: 850px){
+  .contact-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 /* -------------------------------------------------------------------------CONTACT CSS------------------------------------------------------------------------- */
 
 /* -------------------------------------------------------------------------FOOTER------------------------------------------------------------------------- */
@@ -219,6 +230,7 @@ input:-webkit-autofill:active  {
   font-weight: bold;
   font-size: 16px;
   padding: 50px;
+  margin-top: 50px;
 }
 
 .footer .footer-left,
@@ -393,10 +405,10 @@ input:-webkit-autofill:active  {
               <ul>
                   <li><a href="/ES_Home.html">HOME</a></li>
                   <li><a href="/ES_Story.html">OUR STORY</a></li>
-                  <li><a href="/ES_Products.html">PRODUCTS</a></li>
-                  <li><a href="/ES_Location.html">LOCATIONS</a></li>
-                  <li><a href="/ES_Contacts.html">CONTACT US</a></li>
-                  <li><a href="#">FAQ</a></li>
+                  <li><a href="/ES_Fruitshakes.html">PRODUCTS</a></li>
+                  <li><a href="/ES_Location.html">LOCATION</a></li>
+                  <li><a class="active" href="/ES_Contacts.html">CONTACT US</a></li>
+                  <li><a href="/ES_FAQ.html">FAQ</a></li>
   
               </ul>
           </div>
@@ -409,15 +421,15 @@ input:-webkit-autofill:active  {
         <div class="left">
             <h1>GET IN TOUCH</h1>
             <div class="fillup">
-                <form action="https://formsubmit.co/el/jubovo" method="POST">
+                <form action="https://formsubmit.co/leannaelsantos8520@gmail.com" method="POST">
                     <label for="name">Name</label>
-                    <input type="text" name="name" id="name" required>
+                    <input type="text" name="Name" id="name" required>
             
                     <label for="email">Email</label>
-                    <input type="text" name="email" id="email" required>
+                    <input type="email" name="Email" id="email" required>
 
                     <label for="subject">Subject</label>
-                    <select name="subject" id="subject" required>
+                    <select name="Subject" id="subject" required>
                         <option value="">Choose..</option>
                         <option value="">General Feedback</option>
                         <option value="">Store Feedback</option>
@@ -427,9 +439,9 @@ input:-webkit-autofill:active  {
                     </select>
 
                     <label for="comments">Feedback</label>
-                    <input type="text" name="comments" id="comments" style="height: 150px;" required>
+                    <input type="text" name="Comment" id="comments" style="height: 150px;" required>
 
-                    <button class="submit">Submit</button>
+                    <button type="submit" class="submit">Submit</button>
                 </form>
             </div>
         </div>
@@ -451,7 +463,7 @@ input:-webkit-autofill:active  {
     <footer class="footer">
         <div class="footer-left col-md-4 col-sm-6">
             <p class="about">
-            <span> About the company</span> Welcome to Enthusia_StrEat, your ultimate destination for a mouthwatering journey through
+            <span style="color: #0099ff;">About our shop</span> Welcome to Enthusia_StrEat, your ultimate destination for a mouthwatering journey through
             the world of burgers, hotdogs, shakes, and an array of delectable sides. We're not just a food stop;
             We're a flavor-packed adventure waiting to delight your taste buds.
             </p>
@@ -483,12 +495,12 @@ input:-webkit-autofill:active  {
             <div class="footer-right col-md-4 col-sm-6">
               <h2> Enthusia <span> StrEat </span></h2>
               <p class="menu">
-              <a href="/ES_Home.html"> HOME</a> |
-              <a href="#"> OUR STORY</a> |
-              <a href="#"> MENU</a> |
-              <a href="#"> LOCATIONS</a> |
-              <a href="#"> CONTACT US</a> |
-              <a href="#"> FAQ</a>
+              <a href="/ES_Home.html">HOME</a> |
+              <a href="/ES_Story.html">OUR STORY</a> |
+              <a href="/ES_Fruitshakes.html">PRODUCTS</a> |
+              <a href="/ES_Location.html">LOCATION</a> |
+              <a href="/ES_Contacts.html">CONTACT US</a> |
+              <a href="/ES_FAQ.html"> FAQ</a>
               </p>
               <p class="name"> Enthusia StrEat &copy; 2020</p>
             </div>

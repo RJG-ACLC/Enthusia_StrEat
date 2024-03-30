@@ -1,0 +1,601 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Libre+Baskerville">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"></link>
+    <link rel="shortcut icon" type="image/x-icon" href="https://lh3.googleusercontent.com/pw/ABLVV86axSATTNLcLZp-KHmWkKr05Ct9PqfRL9R6Tj9-NISNOS_tp5TQkgbvljhddmDIHAzSTP40fl0CQ-n-j12N0RZvWcocaMaL9ybspzvvI3FW290LptM=w2400" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://shorturl.at/gmRS2"></script>
+    <script src="//code.jivosite.com/widget/rYDIQLhVdz" async></script>
+    <title> 🍔 Enthusia StrEat - FAQ 🍔  </title>
+    <style>
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 17px;
+  background-color: rgb(255, 255, 255);
+}
+
+/* -------------------------------------------------------------------------NAVIGATION------------------------------------------------------------------------- */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFCE32;
+  color: #ffffff;
+}
+
+.logo {
+  font-size: 20px;
+  margin: 10px;
+  font-family: 'Brush Script MT', cursive;
+}
+.logo a {
+  text-decoration: none;
+  color: #ffffff;
+  margin-left: 20px;
+}
+.navbar-links ul {
+  margin: 0px 10px;
+  padding: 0px;
+  display: flex;
+}
+.navbar-links ul li {
+  list-style: none;
+}
+.navbar-links ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 20px;
+  display: block;
+}
+.navbar-links ul li a:hover {
+  background: #ffffff;
+  color: #000000;
+}
+.togglebtn {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+.line {
+  height: 3px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.active {
+  background-color: black;
+  color: white;
+}
+
+@media only screen and (max-width: 850px) {
+  .togglebtn {
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar-links ul li {
+    text-align: center;
+  }
+  .navbar-links ul li a {
+    padding: 16px;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
+/* -------------------------------------------------------------------------NAVIGATION------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------FAQ------------------------------------------------------------------------- */
+
+@import url("https://fonts.googleapis.com/css?family=Hind:300,400&display=swap");
+
+.container {
+  margin: 0 auto;
+  padding: 4rem;
+  width: 48rem;
+  position: relative;
+}
+
+.accordion .accordion-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+.accordion .accordion-item button[aria-expanded=true] {
+  border-bottom: 1px solid #03b5d2;
+}
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+.accordion button:hover, .accordion button:focus {
+  cursor: pointer;
+  color: #03b5d2;
+}
+.accordion button:hover::after, .accordion button:focus::after {
+  cursor: pointer;
+  color: #03b5d2;
+  border: 1px solid #03b5d2;
+}
+.accordion button .accordion-title {
+  padding: 1em 1.5em 1em 0;
+}
+.accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+.accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+.accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+.accordion button[aria-expanded=true] {
+  color: #03b5d2;
+}
+.accordion button[aria-expanded=true] .icon::after {
+  width: 0;
+}
+.accordion button[aria-expanded=true] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 2em 0;
+}
+
+@media screen and (max-width: 767px){
+  .container{
+    width:35rem;
+  }
+}
+
+@media screen and (max-width: 559px){
+  .container{
+    width:33rem;
+    margin-left: -30px;
+  }
+}
+
+@media screen and (max-width: 495px){
+  .container{
+    width:25rem;
+    margin-left: -35px;
+  }
+
+  .accordion {
+    width: 350px;
+  }
+
+  .icon{
+    margin-left: 10px;
+  }
+}
+
+/* -------------------------------------------------------------------------FAQ------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------FOOTER------------------------------------------------------------------------- */
+
+.footer {
+  background: #FFCE32;
+  width: 100%;
+  text-align: left;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 50px;
+}
+
+.footer .footer-left,
+.footer .footer-center,
+.footer .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+/* footer left*/
+
+.footer .footer-left {
+  width: 33%;
+  padding-right: 15px;
+}
+
+.footer .about {
+  line-height: 20px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer .about span {
+  display: block;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer .icons {
+  margin-top: 25px;
+}
+
+.footer .icons a {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 45px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+
+/* footer center*/
+
+.footer .footer-center {
+  width: 31%;
+}
+
+.footer .footer-center i {
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 25px;
+  vertical-align: middle;
+}
+
+.footer .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer .footer-center p {
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.footer .footer-center p a {
+  color: #0099ff;
+  text-decoration: none;
+}
+
+
+/* footer right*/
+
+.footer .footer-right {
+  width: 35%;
+}
+
+.footer h2 {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: normal;
+  margin: 0;
+  font-family: 'Brush Script MT', cursive;
+
+}
+
+.footer h2 span {
+  color: #0099ff;
+  font-family: 'Brush Script MT', cursive;
+
+}
+
+.footer .menu {
+  color: #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer .menu a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer .menu a:hover {
+  color: #0099ff;
+}
+
+.footer .name {
+  color: #0099ff;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .footer {
+    font-size: 14px;
+  }
+  .footer .footer-left,
+  .footer .footer-center,
+  .footer .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .footer .footer-center i {
+    margin-left: 0;
+  }
+}
+
+/* -------------------------------------------------------------------------FOOTER------------------------------------------------------------------------- */
+</style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+          <div class="logo"><a href="file:///F:/Enthusia%20StrEat/Home.html">Enthusia StrEat</a></div>
+          <a class="togglebtn" href="#"><span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span></a>
+          <div class="navbar-links">
+              <ul>
+                  <li><a href="/ES_Home.html">HOME</a></li>
+                  <li><a href="/ES_Story.html">OUR STORY</a></li>
+                  <li><a href="/ES_Fruitshakes.html">PRODUCTS</a></li>
+                  <li><a href="/ES_Location.html">LOCATION</a></li>
+                  <li><a href="/ES_Contacts.html">CONTACT US</a></li>
+                  <li><a class="active" href="/ES_FAQ.html">FAQ</a></li>
+  
+              </ul>
+          </div>
+      </nav>
+</header>
+
+<script id="rendered-js" >
+  const toggleBtn = document.getElementsByClassName('togglebtn')[0];
+  const navbarLinks = document.getElementsByClassName('navbar-links')[0];
+  
+  toggleBtn.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active');
+  });
+      </script>
+
+
+<body>
+  <div class="container">
+  <h2>Frequently Asked Questions</h2>
+  <div class="accordion">
+    <div class="accordion-item">
+      <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">1. DO YOU HAVE A BURGER PATTY SUPPLIER?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>Our very own Burger Patty is homemade, with fresh ingredients.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">2. WHERE DO YOU SOURCE YOUR FRUITS?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>The fruits that we use everyday is fresh from the Balintawak Market.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">3. HOW LONG WILL MY DRINK STAY FRESH?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>The Fruitshakes are to be consumed immediately to avoid its food spoilage.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">4. CAN I STORE MY DRINK IN THE REFRIGERATOR OR FREEZER?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>Yes, you can store the drinks in your refrigerator/freezer immediately after you bought it.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">5. WHERE ARE YOU LOCATED?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>We are currently located at Block 2 Lot 1 Cabalata Street Barangay Tatalon Quezon City (Near Tatalon Park).</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">6. WHAT ARE YOUR OPENING HOURS?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>We are open from Monday to Friday, 11 AM to 2 AM and Saturday & Sunday from 12 PM to 1 AM.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">7. WHAT DO I DO IF I RECEIVE A WRONG ORDER?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>If you are within the area, please return the product immediately, so that we can replace and give you the right order. If you are outside our area, contact our social media or call our cellular number so that we can process the deliver for the replacement of your order.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">8. ARE YOU OPEN FOR FRANCHISE?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>So far, our relative from Cavite has a franchise of our store. But right now, we don't have a plan to open other franchise, under other people. Since, having a franchise is such a big obligation.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">9. DO YOU DELIVER?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>Yes, we deliver around our area and nearby Barangay.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">10. DO YOU HAVE A PLAN TO MOVE TO A BIGGER PLACE SOMEDAY?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>Yes, once our financial situation is stable.</p>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+      <script id="rendered-js" >
+const items = document.querySelectorAll(".accordion button");
+
+function toggleAccordion() {
+  const itemToggle = this.getAttribute('aria-expanded');
+
+  for (i = 0; i < items.length; i++) {if (window.CP.shouldStopExecution(0)) break;
+    items[i].setAttribute('aria-expanded', 'false');
+  }window.CP.exitedLoop(0);
+
+  if (itemToggle == 'false') {
+    this.setAttribute('aria-expanded', 'true');
+  }
+}
+
+items.forEach(item => item.addEventListener('click', toggleAccordion));
+//# sourceURL=pen.js
+    </script>
+
+<footer>
+  <footer class="footer">
+    <div class="footer-left col-md-4 col-sm-6">
+        <p class="about">
+        <span style="color: #0099ff;">About our shop</span> Welcome to Enthusia_StrEat, your ultimate destination for a mouthwatering journey through
+        the world of burgers, hotdogs, shakes, and an array of delectable sides. We're not just a food stop;
+        We're a flavor-packed adventure waiting to delight your taste buds.
+        </p>
+
+        <div class="icons">
+          <a href="https://www.facebook.com/enthusia.streat"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-google-plus"></i></a>
+          <a href="https://www.instagram.com/enthusia_streat/"><i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+        <div class="footer-center col-md-4 col-sm-6">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span> Block 2 Lot 1 Cabalata Street Brgy. Tatalon</span> Quezon City</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p> (+63) 9764 565 551 </p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcRzDQqQnZPDFFpldRcNKCGcTHWHVLwfJQHnMtLfvSHMWChWDfnbGmHzcKvbrdpftzQxSbrJM">leannaelsantos8520@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right col-md-4 col-sm-6">
+          <h2> Enthusia <span> StrEat </span></h2>
+          <p class="menu">
+          <a href="/ES_Story.html">HOME</a> |
+          <a href="/ES_Story.html">OUR STORY</a> |
+          <a href="/ES_Fruitshakes.html">PRODUCTS</a> |
+          <a href="/ES_Location.html">LOCATION</a> |
+          <a href="/ES_Contacts.html">CONTACT US</a> |
+          <a href="/ES_FAQ.html">FAQ</a>
+          </p>
+          <p class="name"> Enthusia StrEat &copy; 2020</p>
+        </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper('.swiper', {
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    loop: true,
+
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+
+</body>
+</html>
