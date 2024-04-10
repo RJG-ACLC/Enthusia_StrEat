@@ -105,7 +105,7 @@ body {
   .navbar-links ul li a {
     padding: 16px;
   }
-  .navbar-links.active {
+  .navbar-links.navlist {
     display: flex;
   }
 }
@@ -184,7 +184,7 @@ body {
   display: table;
 }
 
-.overlay1, .overlay2, .overlay3 {
+.overlay {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -196,7 +196,7 @@ body {
   text-align: center;
 }
 
-.link1, .link2, .link3 {
+.link {
   position: absolute;
   top: 70%;
   left: 50%;
@@ -208,7 +208,7 @@ body {
   border-radius: 15px;
 }
 
-.link1:hover, .link2:hover, .link3:hover {
+.link:hover {
   background-color: white;
   color: orange;
 }
@@ -404,7 +404,7 @@ body {
         <div class="navbar-links">
             <ul>
                 <li><a class="active" href="ES_Home.html">HOME</a></li>
-                <li><a href="ES_Story.html">OUR STORY</a></li>
+                <li><a class="navlist" href="ES_Story.html">OUR STORY</a></li>
                 <li><a href="ES_TraditionalSnacks.html">PRODUCTS</a></li>
                 <li><a href="ES_Location.html">LOCATION</a></li>
                 <li><a href="ES_Contacts.html">CONTACT US</a></li>
@@ -419,7 +419,7 @@ body {
     const navbarLinks = document.getElementsByClassName('navbar-links')[0];
 
     toggleBtn.addEventListener('click', () => {
-      navbarLinks.classList.toggle('active');
+      navbarLinks.classList.toggle('navlist');
     });
   </script>
 
@@ -449,9 +449,9 @@ body {
     <div class="row">
       <div class="column1">
         <img src="https://lh3.googleusercontent.com/pw/AP1GczMJZwOxXWuU57QyHUG-B2WLDjO7MP2SQkmBss1zO5ckLZmk-aUdhYToVVVCyKNm9sz3mZITMV_2VeJ7Fyto4vMI1tXnJuEjMDgspvUb1ZA1MdrjEE157jSw9P4tvd0Hf3TcEo8RWKvdOXKPMrfwbQst=w1348-h500-s-no-gm?authuser=0" style="width:100%; height: 500px;">
-        <h1 class="overlay1">OUR STORY</h1>
+        <h1 class="overlay">OUR STORY</h1>
         <a href="ES_Story.html">
-          <btn class="link1">LEARN MORE</btn>
+          <btn class="link">LEARN MORE</btn>
         </a>
       </div>
     </div>
@@ -459,17 +459,17 @@ body {
     <div class="row">
       <div class="column2">
         <img src="https://lh3.googleusercontent.com/pw/AP1GczMBJHhO-NpkwKnu35FEiDGJjdcf6fdbE4HwohgiWgmewzQeNGl6qoVl5e4FWaKsbkaqvGz0SpG7yE3-0420O62NM2bj7ZcmHhxzW3lToCpjEDLejkpraZiwRjft2b3YroYEmR-jEi7dV6qAxKRzN-Oh=w674-h500-s-no-gm?authuser=0" style="width:100%; height: 500px">
-        <h1 class="overlay2">CHECK OUT OUR PRODUCTS!</h1>
+        <h1 class="overlay">CHECK OUT OUR PRODUCTS!</h1>
         <a href="ES_TraditionalSnacks.html">
-          <btn class="link2">PRODUCTS</btn>
+          <btn class="link">PRODUCTS</btn>
         </a>
       </div>
 
       <div class="column2">
         <img src="https://lh3.googleusercontent.com/pw/AP1GczMV6qvMFDXVO8oSrGSsITpmwugENpNykhi1Qhdy6SnTe3OOwrHDcUePbxWH0rzv5wPwB1LgbakjiQOmgcTccvJLxMh1JvOopV2SZX2rpBXy4iI2i9HJ8P11JjVfWfuLI8Ik9MXKDMU6-M9s4kwIMdfG=w674-h500-s-no-gm?authuser=0" style="width: 100%; height: 500px;">
-        <h1 class="overlay3">FIND OUR STORE</h1>
+        <h1 class="overlay">FIND OUR STORE</h1>
         <a href="ES_Location.html">
-          <btn class="link3">LOCATION</btn>
+          <btn class="link">LOCATION</btn>
         </a>
       </div>
 

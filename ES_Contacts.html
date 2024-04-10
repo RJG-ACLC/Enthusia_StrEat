@@ -106,7 +106,7 @@ a {
   .navbar-links ul li a {
     padding: 16px;
   }
-  .navbar-links.active {
+  .navbar-links.navlist {
     display: flex;
   }
 }
@@ -403,7 +403,7 @@ input:-webkit-autofill:active  {
               <span class="line"></span></a>
           <div class="navbar-links">
               <ul>
-                  <li><a href="ES_Home.html">HOME</a></li>
+                  <li><a class="navlist" href="ES_Home.html">HOME</a></li>
                   <li><a href="ES_Story.html">OUR STORY</a></li>
                   <li><a href="ES_TraditionalSnacks.html">PRODUCTS</a></li>
                   <li><a href="ES_Location.html">LOCATION</a></li>
@@ -414,6 +414,15 @@ input:-webkit-autofill:active  {
           </div>
       </nav>
   </header>
+
+  <script id="rendered-js" >
+    const toggleBtn = document.getElementsByClassName('togglebtn')[0];
+    const navbarLinks = document.getElementsByClassName('navbar-links')[0];
+    
+    toggleBtn.addEventListener('click', () => {
+      navbarLinks.classList.toggle('navlist');
+    });
+  </script>
 
     <h1 class="contact-head">Got a question or an inquiry?</h1>
 

@@ -107,7 +107,7 @@ a {
   .navbar-links ul li a {
     padding: 16px;
   }
-  .navbar-links.active {
+  .navbar-links.navlist {
     display: flex;
   }
 }
@@ -572,7 +572,7 @@ a {
                 <span class="line"></span></a>
             <div class="navbar-links">
                 <ul>
-                    <li><a href="ES_Home.html">HOME</a></li>
+                    <li><a class="navlist" href="ES_Home.html">HOME</a></li>
                     <li><a href="ES_Story.html">OUR STORY</a></li>
                     <li><a class="active" href="ES_TraditionalSnacks.html">PRODUCTS</a></li>
                     <li><a href="ES_Location.html">LOCATION</a></li>
@@ -588,7 +588,7 @@ a {
         const navbarLinks = document.getElementsByClassName('navbar-links')[0];
     
         toggleBtn.addEventListener('click', () => {
-          navbarLinks.classList.toggle('active');
+          navbarLinks.classList.toggle('navlist');
         });
       </script>
 
