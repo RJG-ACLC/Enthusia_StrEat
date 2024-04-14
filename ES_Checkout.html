@@ -1,0 +1,322 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Libre+Baskerville">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"></link>
+    <link rel="shortcut icon" type="image/x-icon" href="https://lh3.googleusercontent.com/pw/ABLVV86axSATTNLcLZp-KHmWkKr05Ct9PqfRL9R6Tj9-NISNOS_tp5TQkgbvljhddmDIHAzSTP40fl0CQ-n-j12N0RZvWcocaMaL9ybspzvvI3FW290LptM=w2400" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//code.jivosite.com/widget/rYDIQLhVdz" async></script>
+    <title> 🍔 Enthusia StrEat - Check Out 🍔  </title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 17px;
+  background-color: rgb(255, 255, 255);
+}
+
+/* -------------------------------------------------------------------------NAVIGATION------------------------------------------------------------------------- */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFCE32;
+  color: #ffffff;
+  z-index: 999;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.logo {
+  font-size: 20px;
+  margin: 10px;
+  font-family: 'Brush Script MT', cursive;
+}
+.logo a {
+  text-decoration: none;
+  color: #ffffff;
+  margin-left: 20px;
+}
+
+.navbar-links ul {
+  margin: 0px 10px;
+  padding: 0px;
+  display: flex;
+}
+.navbar-links ul li {
+  list-style: none;
+}
+.navbar-links ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 20px;
+  display: block;
+}
+.navbar-links ul li a:hover {
+  background: #ffffff;
+  color: #000000;
+}
+.togglebtn {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+.line {
+  height: 3px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.active {
+  background-color: black;
+  color: white;
+}
+
+@media only screen and (max-width: 850px) {
+  .togglebtn {
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar-links ul li {
+    text-align: center;
+  }
+  .navbar-links ul li a {
+    padding: 16px;
+  }
+  .navbar-links.navlist {
+    display: flex;
+  }
+}
+
+/* -------------------------------------------------------------------------NAVIGATION------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------CHECKOUT CSS------------------------------------------------------------------------- */
+body {
+  font-family: Arial;
+  font-size: 17px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+/* -------------------------------------------------------------------------CHECKOUT CSS------------------------------------------------------------------------- */
+</style>
+</head>
+
+<body>
+    <header>
+      <nav class="navbar" id="navbar">
+          <div class="logo"><a href="file:///F:/Enthusia%20StrEat/Home.html">Enthusia StrEat</a></div>
+          <a class="togglebtn" href="#"><span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span></a>
+          <div class="navbar-links">
+              <ul>
+                <li><a class="navlist" href="ES_Home.html">HOME</a></li>
+                <li><a href="ES_Story.html">OUR STORY</a></li>
+                <li><a href="ES_Fruitshakes.html">PRODUCTS</a></li>
+                <li><a href="ES_Location.html">LOCATION</a></li>
+                <li><a href="ES_Contacts.html">CONTACT US</a></li>
+                <li><a href="ES_FAQ.html">FAQ</a></li>
+                <li><a class="active" href="ES_Checkout.html">Check Out</a></li>
+              </ul>
+          </div>
+      </nav>
+    </header>
+
+    <script id="rendered-js" >
+        const toggleBtn = document.getElementsByClassName('togglebtn')[0];
+        const navbarLinks = document.getElementsByClassName('navbar-links')[0];
+        
+        toggleBtn.addEventListener('click', () => {
+          navbarLinks.classList.toggle('navlist');
+        });
+            </script>
+
+    <h2 class="title-checkout" style="margin-left: 30%;">CHECKOUT</h2>
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="/action_page.php">
+      
+        <div class="row">
+          <div class="col-50">
+            <h3>Billing Address</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="Brgy. Tatalon">
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="Quezon City">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">Region</label>
+                <input type="text" id="state" name="state" placeholder="NCR">
+              </div>
+              <div class="col-50">
+                <label for="zip">District</label>
+                <input type="text" id="zip" name="zip" placeholder="District 1">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Methods</label>
+            <div class="icon-container">
+              <i class="fa-solid fa-g" style="color:blue;"></i>
+              <i class="fa fa-paypal" style="color:navy;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname" style="margin-top: 30px;">Registered Name</label>
+            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+            <label for="ccnum" style="margin-top: 30px;">Registered Mobile Number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="0999-888-7777">
+          </div>
+          
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+        </label>
+        <input type="submit" value="Continue to checkout" class="btn" action="#">
+      </form>
+    </div>
+  </div>
+  <div class="col-25">
+    <div class="container">
+      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+      <p><a href="#">Product 1</a> <span class="price">₱60</span></p>
+      <p><a href="#">Product 2</a> <span class="price">₱80</span></p>
+      <p><a href="#">Product 3</a> <span class="price">₱60</span></p>
+      <p><a href="#">Product 4</a> <span class="price">₱125</span></p>
+      <hr>
+      <p>Total <span class="price" style="color:black"><b>₱325</b></span></p>
+    </div>
+  </div>
+</div>
+    

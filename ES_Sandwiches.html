@@ -33,6 +33,13 @@ a {
   align-items: center;
   background: #FFCE32;
   color: #ffffff;
+  z-index: 999;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .logo {
@@ -140,7 +147,7 @@ a {
   margin-left: -20px;
 }
 
-.snacks {
+.fruitshake {
   position: absolute;
   border-radius: 15px;
   text-decoration: none;
@@ -149,7 +156,7 @@ a {
   font-weight: bold;
 }
 
-.fruitshake {
+.burger {
   position: absolute;
   border-radius: 15px;
   text-decoration: none;
@@ -158,30 +165,12 @@ a {
   font-weight: bold;
 }
 
-.burger {
-  position: absolute;
-  border-radius: 15px;
-  font-weight: bold;
-  text-decoration: none;
-  margin-top: 300px;
-  margin-left: 100px;
-}
-
 .sandwich {
   position: absolute;
   border-radius: 15px;
   font-weight: bold;
   text-decoration: none;
-  margin-top: 400px;
-  margin-left: 100px;
-}
-
-.others {
-  position: absolute;
-  border-radius: 15px;
-  font-weight: bold;
-  text-decoration: none;
-  margin-top: 500px;
+  margin-top: 300px;
   margin-left: 100px;
 }
 
@@ -198,11 +187,6 @@ a {
   box-shadow: 0 9px #999;
 }
 
-.snacks .button {
-  margin-left: -20px;
-  padding: 15px 5px;
-}
-
 .fruitshake .button {
   margin-left: -20px;
   padding: 15px 40px;
@@ -216,11 +200,6 @@ a {
 .sandwich .button {
   margin-left: -20px;
   padding: 15px 38px;
-}
-
-.others .button {
-  margin-left: -20px;
-  padding: 15px 67px;
 }
 
 .button:active {
@@ -253,7 +232,7 @@ a {
   text-align: center;
   background-color: orange;
   border-radius: 15px;
-  margin-top: 100px;
+  margin-top: 70px;
   margin-right: 100px;
   margin-bottom: 10px;
   display: block;
@@ -268,11 +247,63 @@ a {
 
 .content {
   background-color: orange;
+  cursor: pointer;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 999; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal content */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 600px;
+  max-height: 800px;
+  position: relative;
+  top: 50px;
+}
+
+/* Caption text */
+.caption {
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+  top: 50px;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 @media (max-width: 1379px) {
 
-.snacks, .fruitshake,  .burger, .sandwich, .others{
+.fruitshake,  .burger, .sandwich{
     margin-left: 30px;
 }
 }
@@ -299,7 +330,7 @@ a {
     display: block;
   }
 
-  .snacks, .fruitshake, .burger, .sandwich, .others {
+  .fruitshake, .burger, .sandwich {
     z-index: 1;
   }
 
@@ -571,7 +602,7 @@ a {
     
     <body>
       <header>
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
             <div class="logo"><a href="file:///F:/Enthusia%20StrEat/Home.html">Enthusia StrEat</a></div>
             <a class="togglebtn" href="#"><span class="line"></span>
                 <span class="line"></span>
@@ -580,10 +611,11 @@ a {
                 <ul>
                     <li><a class="navlist" href="ES_Home.html">HOME</a></li>
                     <li><a href="ES_Story.html">OUR STORY</a></li>
-                    <li><a class="active" href="ES_TraditionalSnacks.html">PRODUCTS</a></li>
+                    <li><a class="active" href="ES_Fruitshakes.html">PRODUCTS</a></li>
                     <li><a href="ES_Location.html">LOCATION</a></li>
                     <li><a href="ES_Contacts.html">CONTACT US</a></li>
                     <li><a href="ES_FAQ.html">FAQ</a></li>
+                    <li><a href="ES_Checkout.html">Check Out</a></li>
                 </ul>
             </div>
         </nav>
@@ -603,14 +635,12 @@ a {
 
       <div class="navmenu" id="navmenu">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a class="snacks" href="ES_TraditionalSnacks.html"><button class="button" id="snacks">Traditional Snacks</button></a>
         <a class="fruitshake" href="ES_Fruitshakes.html"><button class="button" id="fruitshake">Fruitshakes</button></a>
         <a class="burger" href="ES_Burgers.html"><button class="button" id="burger">Burgers</button></a>
         <a class="sandwich" href="ES_Sandwiches.html"><button class="button" id="sandwich">Sandwiches</button></a>
-        <a class="others" href="ES_Others.html"><button class="button" id="others">Others</button></a>
       </div>
 
-        <svg id="svg" width="300" height="600"><line id="line" x1="300" y1="1000" x2="300" y2="70"  stroke="black"></svg>
+        <svg id="svg" width="300" height="400"><line id="line" x1="300" y1="1000" x2="300" y2="70"  stroke="black"></svg>
 
           <script>
             function myFunction(x) {
@@ -638,34 +668,72 @@ a {
         </script>
 
         <div class="row">
+
+          <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption1" class="caption"></div>
+            <div id="caption2" class="caption"></div>
+          </div>
+
           <div class="column nature">
             <div class="content">
-              <img src="https://lh3.googleusercontent.com/pw/ABLVV85GHmJCkETdJ-c-XrUIUYRWTO_YCDCzmN8b8E_d-HAb7Up-umqtV0lMe1ul8rSlkVOhXRtahNdWjl4spt-31h6C-DAxfO5Uxyg23JtmP7QQ1gwuUnw=w2400" style="width: 200px; height: 200px; border-radius: 10px;">
+              <img src="https://lh3.googleusercontent.com/pw/ABLVV85GHmJCkETdJ-c-XrUIUYRWTO_YCDCzmN8b8E_d-HAb7Up-umqtV0lMe1ul8rSlkVOhXRtahNdWjl4spt-31h6C-DAxfO5Uxyg23JtmP7QQ1gwuUnw=w2400" style="width: 200px; height: 200px; border-radius: 10px;"
+              onclick="openModal('https://lh3.googleusercontent.com/pw/ABLVV85GHmJCkETdJ-c-XrUIUYRWTO_YCDCzmN8b8E_d-HAb7Up-umqtV0lMe1ul8rSlkVOhXRtahNdWjl4spt-31h6C-DAxfO5Uxyg23JtmP7QQ1gwuUnw=w2400', 'Hotdog Sandwich ₱35', 'For only ₱35, you can taste a Hotdog Sandwich, rich with ingredients.')">
               <h4>Hotdog Sandwich</h4>
             </div>
           </div>
 
           <div class="column nature">
             <div class="content">
-              <img src="https://lh3.googleusercontent.com/pw/ABLVV86_7sLng2Ij7ZsgrmQNfry3Q5erW8lQa3MEE4F-xe4DhW__BqZuiMmYKChVe1U3XZFL6kqaUflb43dbJO43p3n4N-qBdnMWZ4r7n-SIHv-FGnRjFfE=w2400" style="width: 200px; height: 200px; border-radius: 10px;">
+              <img src="https://lh3.googleusercontent.com/pw/ABLVV86_7sLng2Ij7ZsgrmQNfry3Q5erW8lQa3MEE4F-xe4DhW__BqZuiMmYKChVe1U3XZFL6kqaUflb43dbJO43p3n4N-qBdnMWZ4r7n-SIHv-FGnRjFfE=w2400" style="width: 200px; height: 200px; border-radius: 10px;"
+              onclick="openModal('https://lh3.googleusercontent.com/pw/ABLVV86_7sLng2Ij7ZsgrmQNfry3Q5erW8lQa3MEE4F-xe4DhW__BqZuiMmYKChVe1U3XZFL6kqaUflb43dbJO43p3n4N-qBdnMWZ4r7n-SIHv-FGnRjFfE=w2400', 'Footlong ₱60', 'For only ₱60, you can taste a Footlong, rich with ingredients.')">
               <h4>Footlong</h4>
             </div>
           </div>
 
           <div class="column nature">
             <div class="content">
-              <img src="https://lh3.googleusercontent.com/pw/ABLVV85SsCKxro7CZaMVy1WXU72lcx_fedgypf0jk9yH-hPlxmFF4f6yHc7Af0vDCJHxRe_fcVOyYK0z02l9EjsDHlvZP_xAD4tg3zXLJW5Ez-s7RzF3N60=w2400" style="width: 200px; height: 200px; border-radius: 10px;">
+              <img src="https://lh3.googleusercontent.com/pw/ABLVV85SsCKxro7CZaMVy1WXU72lcx_fedgypf0jk9yH-hPlxmFF4f6yHc7Af0vDCJHxRe_fcVOyYK0z02l9EjsDHlvZP_xAD4tg3zXLJW5Ez-s7RzF3N60=w2400" style="width: 200px; height: 200px; border-radius: 10px;"
+              onclick="openModal('https://lh3.googleusercontent.com/pw/ABLVV85SsCKxro7CZaMVy1WXU72lcx_fedgypf0jk9yH-hPlxmFF4f6yHc7Af0vDCJHxRe_fcVOyYK0z02l9EjsDHlvZP_xAD4tg3zXLJW5Ez-s7RzF3N60=w2400', 'Half Footlong w/ Fries ₱60', 'For only ₱60, you can acquire yourself a half footlong with fries.')">
               <h4>Half Footlong w/ Fries</h4>
             </div>
           </div>
 
           <div class="column nature">
             <div class="content">
-              <img src="https://lh3.googleusercontent.com/pw/ABLVV86m8HlRN2vc1GNtYBA-hEskMVdh44a2zMAVcSlpwgmygIukdL5Fmj8g9sf4eGfotRDAl1XINW3bv8_8gqGdYMUeMy3qXbqs3NA1_E_wNT3zjSWmJN0=w2400" style="width: 200px; height: 200px; border-radius: 10px;">
+              <img src="https://lh3.googleusercontent.com/pw/ABLVV86m8HlRN2vc1GNtYBA-hEskMVdh44a2zMAVcSlpwgmygIukdL5Fmj8g9sf4eGfotRDAl1XINW3bv8_8gqGdYMUeMy3qXbqs3NA1_E_wNT3zjSWmJN0=w2400" style="width: 200px; height: 200px; border-radius: 10px;"
+              onclick="openModal('https://lh3.googleusercontent.com/pw/ABLVV86m8HlRN2vc1GNtYBA-hEskMVdh44a2zMAVcSlpwgmygIukdL5Fmj8g9sf4eGfotRDAl1XINW3bv8_8gqGdYMUeMy3qXbqs3NA1_E_wNT3zjSWmJN0=w2400', 'Hungarian Sandwich ₱70', 'For only ₱70, you can taste a Hungarian Sandwich, filled with rich flavors.')">
               <h4>Hungarian Sandwich</h4>
             </div>
           </div>
+
+          <script>
+            // Function to open the modal
+            function openModal(imgSrc, caption1, caption2) {
+              var modal = document.getElementById('myModal');
+              var modalImg = document.getElementById("img01");
+              var captionText1 = document.getElementById("caption1");
+              var captionText2 = document.getElementById("caption2");
+              modal.style.display = "block";
+              modalImg.src = imgSrc;
+              captionText1.innerHTML = caption1;
+              captionText2.innerHTML = caption2;
+            }
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              var modal = document.getElementById('myModal');
+              modal.style.display = "none";
+            }
+            </script>
+
         </div>
+
+
         <footer class="footer">
             <div class="footer-left col-md-4 col-sm-6">
                 <p class="about">
@@ -675,9 +743,9 @@ a {
                 </p>
 
                 <div class="icons">
-                  <a href="https://www.facebook.com/enthusia.streat"><i class="fa fa-facebook"></i></a>
-                  <a href="https://www.instagram.com/enthusia_streat/#"><i class="fa fa-instagram"></i></a>
-                  <a href="https://www.youtube.com/@Enthusia_StrEat"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                  <a href="https://www.facebook.com/enthusia.streat" target="_blank"><i class="fa fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/enthusia_streat/#" target="_blank"><i class="fa fa-instagram"></i></a>
+                  <a href="https://www.youtube.com/@Enthusia_StrEat" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
                 </div>
             </div>
                 <div class="footer-center col-md-4 col-sm-6">
@@ -693,7 +761,7 @@ a {
 
                     <div>
                         <i class="fa fa-envelope"></i>
-                        <p><a href="https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcRzDQqQnZPDFFpldRcNKCGcTHWHVLwfJQHnMtLfvSHMWChWDfnbGmHzcKvbrdpftzQxSbrJM">enthusiastreat4@gmail.com</a></p>
+                        <p><a href="https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcRzDQqQnZPDFFpldRcNKCGcTHWHVLwfJQHnMtLfvSHMWChWDfnbGmHzcKvbrdpftzQxSbrJM" target="_blank">enthusiastreat4@gmail.com</a></p>
                     </div>
                 </div>
                 <div class="footer-right col-md-4 col-sm-6">
@@ -701,7 +769,7 @@ a {
                   <p class="menu">
                   <a href="ES_Home.html">HOME</a> |
                   <a href="ES_Story.html">OUR STORY</a> |
-                  <a href="ES_TraditionalSnacks.html">PRODUCTS</a> |
+                  <a href="ES_Fruitshakes.html">PRODUCTS</a> |
                   <a href="ES_Location.html">LOCATION</a> |
                   <a href="ES_Contacts.html">CONTACT US</a> |
                   <a href="ES_FAQ.html">FAQ</a>
@@ -709,6 +777,21 @@ a {
                   <p class="name"> Enthusia StrEat &copy; 2020</p>
                 </div>
         </footer>
+
+        <script>
+          window.onscroll = function() {myFunction()};
+          
+          var header = document.getElementById("navbar");
+          var sticky = header.offsetTop;
+          
+          function myFunction() {
+            if (window.pageYOffset > sticky) {
+              header.classList.add("sticky");
+            } else {
+              header.classList.remove("sticky");
+            }
+          }
+          </script>
 
         <script>
           function openNav() {

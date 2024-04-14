@@ -31,6 +31,13 @@ a {
   align-items: center;
   background: #FFCE32;
   color: #ffffff;
+  z-index: 999;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .logo {
@@ -321,7 +328,7 @@ a {
 
   <body>
     <header>
-      <nav class="navbar">
+      <nav class="navbar" id="navbar">
         <div class="logo"><a href="#">Enthusia StrEat</a></div>
 
           <a class="togglebtn" href="#"><span class="line"></span>
@@ -331,14 +338,13 @@ a {
 
           <div class="navbar-links">
             <ul>
-
               <li><a class="navlist" href="ES_Home.html">HOME</a></li>
               <li><a class="active" href="ES_Story.html">OUR STORY</a></li>
-              <li><a href="ES_TraditionalSnacks.html">PRODUCTS</a></li>
+              <li><a href="ES_Fruitshakes.html">PRODUCTS</a></li>
               <li><a href="ES_Location.html">LOCATION</a></li>
               <li><a href="ES_Contacts.html">CONTACT US</a></li>
               <li><a href="ES_FAQ.html">FAQ</a></li>
-
+              <li><a href="ES_Checkout.html">Check Out</a></li>
             </ul>
           </div>
         </div>
@@ -392,9 +398,9 @@ a {
       </p>
 
       <div class="icons">
-        <a href="https://www.facebook.com/enthusia.streat"><i class="fa fa-facebook"></i></a>
-        <a href="https://www.instagram.com/enthusia_streat/#"><i class="fa fa-instagram"></i></a>
-        <a href="https://www.youtube.com/@Enthusia_StrEat"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/enthusia.streat" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/enthusia_streat/#" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@Enthusia_StrEat" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
       </div>
     </div>
 
@@ -411,7 +417,7 @@ a {
 
       <div>
         <i class="fa fa-envelope"></i>
-        <p><a href="https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcRzDQqQnZPDFFpldRcNKCGcTHWHVLwfJQHnMtLfvSHMWChWDfnbGmHzcKvbrdpftzQxSbrJM">enthusiastreat4@gmail.com</a></p>
+        <p><a href="https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcRzDQqQnZPDFFpldRcNKCGcTHWHVLwfJQHnMtLfvSHMWChWDfnbGmHzcKvbrdpftzQxSbrJM" target="_blank">enthusiastreat4@gmail.com</a></p>
       </div>
     </div>
   <div class="footer-right col-md-4 col-sm-6">
@@ -419,7 +425,7 @@ a {
     <p class="menu">
     <a href="ES_Home.html">HOME</a> |
     <a href="ES_Story.html">OUR STORY</a> |
-    <a href="ES_TraditionalSnacks.html">PRODUCTS</a> |
+    <a href="ES_Fruitshakes.html">PRODUCTS</a> |
     <a href="ES_Location.html">LOCATION</a> |
     <a href="ES_Contacts.html">CONTACT US</a> |
     <a href="ES_FAQ.html">FAQ</a>
@@ -427,6 +433,21 @@ a {
     <p class="name"> Enthusia StrEat &copy; 2020</p>
   </div>
   </footer>
+
+  <script>
+    window.onscroll = function() {myFunction()};
+    
+    var header = document.getElementById("navbar");
+    var sticky = header.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+    </script>
 
 
 </body>
