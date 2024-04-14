@@ -36,6 +36,7 @@ a {
   z-index: 998;
 }
 
+
 .sticky {
   position: fixed;
   top: 0;
@@ -418,13 +419,13 @@ a {
   text-align: center;
 }
 
-.cart .buttons{
+.cart .checkout-button{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   text-align: center;
+  left: 50;
 }
 
-.cart .buttons div {
+.cart .checkout-button div {
   background-color: #0e0f11;
   display: flex;
   justify-content: center;
@@ -433,18 +434,12 @@ a {
   cursor: pointer;
 }
 
-.cart .buttons a {
+.cart .checkout-button a {
   color: #fff;
-}
-
-.cart .buttons .checkout1 {
-  background-color: #000;
-  color: #000;
-}
-
-.cart .buttons .checkout2 {
-  background-color: #e8bc0e;
-  color: #000;
+  padding: 20px;
+  background-color: #49D8B9;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .cart .closebtn {
@@ -763,7 +758,7 @@ a {
     margin-left: 40px;
   }
   .footer {
-    margin-top: 4700px;
+    margin-top: 5000px;
   }
 }
 
@@ -811,6 +806,12 @@ a {
         <div class="cart" style="z-index: 999;">
           <a href="javascript:void(0)" class="closebtn close" onclick="closeNav()">×</a>
           <h2>CART</h2>
+
+          <div class="listCart"></div> 
+          
+          <div class="checkout-button">
+            <a href="ES_Checkout.html">HEAD TO CHECKOUT</a>
+          </div>
         </div>
 
         <script>
@@ -899,6 +900,7 @@ close.addEventListener('click', function (){
               <img src="https://lh3.googleusercontent.com/pw/ABLVV84kJN9tGGjtLOzi8tazipW_0HILI8Bk99yU5BU97fBNsmA6gGtU96qHbLdqKhHjyj-NfJBpHZpcZjWvzXuXud5ysKgyOpyqw4Y1c0JCIbr3raYqUKM=w2400" class="modal-img" style="width: 200px; height: 200px; border-radius: 10px;" 
               onclick="openModal('https://lh3.googleusercontent.com/pw/ABLVV84kJN9tGGjtLOzi8tazipW_0HILI8Bk99yU5BU97fBNsmA6gGtU96qHbLdqKhHjyj-NfJBpHZpcZjWvzXuXud5ysKgyOpyqw4Y1c0JCIbr3raYqUKM=w2400', 'Overload Halo-halo Shake ₱80', 'Get a taste of our popular Overload Halo-halo! For only ₱80, you can try our Overload Halo-halo, overloaded with different fresh fruits.')">
               <h4>Overload Halo-halo</h4>
+              <button>Add to Cart</button>
             </div>
           </div>
 
@@ -907,6 +909,7 @@ close.addEventListener('click', function (){
               <img src="https://lh3.googleusercontent.com/pw/ABLVV86rVKAHBOlX_IHk6HZi2jU2gdhm_sALKVG70iN9t2g7xOU1baymCmPpUSMzN4cKLaCyd21YTIfe-IhXG5jZUbqVVLvEX32fGFW83IQpG8VPxz8HUSQ=w2400" class="modal-img" style="width: 200px; height: 200px; border-radius: 10px;" 
               onclick="openModal('https://lh3.googleusercontent.com/pw/ABLVV86rVKAHBOlX_IHk6HZi2jU2gdhm_sALKVG70iN9t2g7xOU1baymCmPpUSMzN4cKLaCyd21YTIfe-IhXG5jZUbqVVLvEX32fGFW83IQpG8VPxz8HUSQ=w2400', 'Mango Shake ₱60', 'Get a taste of our freshly brought Mango Shake! Get a taste of our 22oz fresh Mango Shake, for only ₱60.')">
               <h4>Mango Shake</h4>
+              <button>Add to Cart</button>
             </div>
           </div>
 
@@ -915,6 +918,7 @@ close.addEventListener('click', function (){
               <img src="https://lh3.googleusercontent.com/pw/ABLVV86Eqc0JZ7g6iAZOOEtXVTRqG54FDd7mAbnnXK9qiaoZT-FIFwYYrjoiNRVtfVjbKJ1aRxsmMUk10oTq5plMnHyJN7PC5362RApPy-p4K-h52F5TjM4=w2400" class="modal-img" style="width: 200px; height: 200px; border-radius: 10px;" 
               onclick="openModal('https://lh3.googleusercontent.com/pw/ABLVV86Eqc0JZ7g6iAZOOEtXVTRqG54FDd7mAbnnXK9qiaoZT-FIFwYYrjoiNRVtfVjbKJ1aRxsmMUk10oTq5plMnHyJN7PC5362RApPy-p4K-h52F5TjM4=w2400', 'Avocado Shake ₱60', 'Get a taste of our freshly brought Avocado Shake! Get a taste of our 22oz fresh Avocado Shake, for only ₱60.')">
               <h4>Avocado Shake</h4>
+              <button>Add to Cart</button>
             </div>
           </div>
 
@@ -923,6 +927,7 @@ close.addEventListener('click', function (){
               <img src="https://lh3.googleusercontent.com/pw/ABLVV84fwrZ6S7YJ-DzlOYjtNCvnfXUIcOAC1qHgTvrDhAv7gyIOv7KziLFUwNRyuQbjuoL4yBVeny3powg9_J5xPexD3aNy8ErPJfiIqUYmxARCVkn-wNY=w2400" class="modal-img" style="width: 200px; height: 200px; border-radius: 10px;" 
               onclick="openModal('https://lh3.googleusercontent.com/pw/ABLVV84fwrZ6S7YJ-DzlOYjtNCvnfXUIcOAC1qHgTvrDhAv7gyIOv7KziLFUwNRyuQbjuoL4yBVeny3powg9_J5xPexD3aNy8ErPJfiIqUYmxARCVkn-wNY=w2400', 'Banana Shake ₱60', 'Get a taste of our freshly brought Strawberry Shake! Get a taste of our 22oz fresh Strawberry Shake, for only ₱60.')">
               <h4>Strawberry Shake</h4>
+              <button>Add to Cart</button>
             </div>
           </div>
 
@@ -931,6 +936,7 @@ close.addEventListener('click', function (){
               <img src="https://lh3.googleusercontent.com/pw/ABLVV86xGYPYC-K2NxMjVvbopmrFzDsgJo49pk1GsU21zhzBuo8MjKNaENyVQh1AC9KVMsJc1WjSShcfoxIqhGbkopinWFjLs6dNf_C-YWPaVuS7UuUhBnI=w2400" class="modal-img" style="width: 200px; height: 200px; border-radius: 10px;" 
               onclick="openModal('https://lh3.googleusercontent.com/pw/ABLVV86xGYPYC-K2NxMjVvbopmrFzDsgJo49pk1GsU21zhzBuo8MjKNaENyVQh1AC9KVMsJc1WjSShcfoxIqhGbkopinWFjLs6dNf_C-YWPaVuS7UuUhBnI=w2400', 'Banana Shake ₱60', 'Get a taste of our freshly brought Banana Shake! Get a taste of our 22oz fresh Banana Shake, for only ₱60.')">
               <h4>Banana Shake</h4>
+              <button>Add to Cart</button>
             </div>
           </div>
 
@@ -939,6 +945,7 @@ close.addEventListener('click', function (){
               <img src="https://lh3.googleusercontent.com/pw/ABLVV84AJKSPXSKge1h-CptUUO-4OP2mcbRkI5PH1mRWKYoNN58P2aa48I9NR-fPwEyKDQ_2F4TV1tescHfAFbOwXUriJfobNMPqfYqTq417ERWJfL9DMSA=w2400" class="modal-img" style="width: 200px; height: 200px; border-radius: 10px;"  
               onclick="openModal('https://lh3.googleusercontent.com/pw/ABLVV84AJKSPXSKge1h-CptUUO-4OP2mcbRkI5PH1mRWKYoNN58P2aa48I9NR-fPwEyKDQ_2F4TV1tescHfAFbOwXUriJfobNMPqfYqTq417ERWJfL9DMSA=w2400', 'Grape Shake ₱60', 'Get a taste of our freshly brought Grape Shake! Get a taste of our 22oz fresh Grape Shake, for only ₱60.')">
               <h4>Grape Shake</h4>
+              <button>Add to Cart</button>
             </div>
           </div>
 
@@ -947,6 +954,7 @@ close.addEventListener('click', function (){
               <img src="https://lh3.googleusercontent.com/pw/ABLVV84O0unEm72DzCDgTh_EZ2iiXzCokK52iIw67jsQHabltQkZbZCHGhMmHrcyGheRIKumBIsXyzNeR1yDORv5WYS7YuVC8G2dOahcUnFrnoaRASEg4WQ=w2400" class="modal-img" style="width: 200px; height: 200px; border-radius: 10px;" 
               onclick="openModal('https://lh3.googleusercontent.com/pw/ABLVV84O0unEm72DzCDgTh_EZ2iiXzCokK52iIw67jsQHabltQkZbZCHGhMmHrcyGheRIKumBIsXyzNeR1yDORv5WYS7YuVC8G2dOahcUnFrnoaRASEg4WQ=w2400', 'Melon Shake ₱60', 'Get a taste of our freshly brought Melon Shake! Get a taste of our 22oz fresh Melon Shake, for only ₱60.')">
               <h4>Guyabano Shake</h4>
+              <button>Add to Cart</button>
             </div>
           </div>
 
@@ -955,6 +963,7 @@ close.addEventListener('click', function (){
               <img src="https://lh3.googleusercontent.com/pw/ABLVV86BvXm9FZVzFGYEhgVkG3WAB-NnMDKZRlPu1m94e-5mwmjcfE4kcdBpzuElXSBfhrNScpiIkvX__OspC-ZsQYoJuN9QaG_S0wFu_rQnz_QTVl_iHY8=w2400" class="modal-img" style="width: 200px; height: 200px; border-radius: 10px;" 
               onclick="openModal('https://lh3.googleusercontent.com/pw/ABLVV85CYzxd3gNUGHBdzf-zhTGaAIx6Oo87unXmZ2952IqpyJeO8DAxGfj3fyCZkwiFjf0myUnU4rUKFmjrDFIMDa5IoYn68dFq6isl7YroZdY_ZrmVXTY=w2400', 'Buko Shake ₱60', 'This product contains a fresh buko shake, get a taste of our traditional shake for only ₱60.')">
               <h4>Melon Shake</h4>
+              <button>Add to Cart</button>
             </div>
           </div>
 
@@ -963,6 +972,7 @@ close.addEventListener('click', function (){
               <img src="https://lh3.googleusercontent.com/pw/ABLVV85CYzxd3gNUGHBdzf-zhTGaAIx6Oo87unXmZ2952IqpyJeO8DAxGfj3fyCZkwiFjf0myUnU4rUKFmjrDFIMDa5IoYn68dFq6isl7YroZdY_ZrmVXTY=w2400" class="modal-img" style="width: 200px; height: 200px; border-radius: 10px;" 
               onclick="openModal('https://lh3.googleusercontent.com/pw/ABLVV85CYzxd3gNUGHBdzf-zhTGaAIx6Oo87unXmZ2952IqpyJeO8DAxGfj3fyCZkwiFjf0myUnU4rUKFmjrDFIMDa5IoYn68dFq6isl7YroZdY_ZrmVXTY=w2400', 'Buko Shake ₱60', 'This product contains a fresh buko shake, get a taste of our traditional shake for only ₱60.')">
               <h4>Buko Shake</h4>
+              <button>Add to Cart</button>
             </div>
           </div>
 
@@ -971,6 +981,7 @@ close.addEventListener('click', function (){
               <img src="https://lh3.googleusercontent.com/pw/ABLVV85NhPxsZG9ef2u5XLguYjPIcozBQzt6WTKzlFTxK8oyg8tBtNLzzhfhi4fJtiktxJFj1IDceRjL_sS9hX9BhR8IXcL_rET2oBRS8EP5Jo7qAnFwtrI=w2400" class="modal-img" style="width: 200px; height: 200px; border-radius: 10px;" 
               onclick="openModal('https://lh3.googleusercontent.com/pw/ABLVV85NhPxsZG9ef2u5XLguYjPIcozBQzt6WTKzlFTxK8oyg8tBtNLzzhfhi4fJtiktxJFj1IDceRjL_sS9hX9BhR8IXcL_rET2oBRS8EP5Jo7qAnFwtrI=w2400', 'Chocolate Shake ₱60', 'This product contains a lot of chocolate for chocolate lovers, and for only ₱60, you can get yourself a 22oz chocolate paradise.')">
               <h4>Chocolate Shake</h4>
+              <button>Add to Cart</button>
             </div>
           </div>
 
@@ -979,6 +990,7 @@ close.addEventListener('click', function (){
               <img src="https://lh3.googleusercontent.com/pw/ABLVV86WK72f0EVgIBA_bhZDElrHwA0zGT9EoOpMoIf_rww2m_VMacorIZ71tViMqvWGzbM9RwJO5-HFubI6TvZ1kKcTPNjoXhPszqVuQXt2YSZz_KXJFO4=w2400" class="modal-img" style="width: 200px; height: 200px; border-radius: 10px;" 
               onclick="openModal('https://lh3.googleusercontent.com/pw/ABLVV86WK72f0EVgIBA_bhZDElrHwA0zGT9EoOpMoIf_rww2m_VMacorIZ71tViMqvWGzbM9RwJO5-HFubI6TvZ1kKcTPNjoXhPszqVuQXt2YSZz_KXJFO4=w2400', 'Oreo Shake ₱60', 'This product is filled with Oreo, made as a shake. For only ₱60, you can get yourself 22oz cup of Oreo Shake.')">
               <h4>Oreo Shake</h4>
+              <button>Add to Cart</button>
             </div>
           </div>
 
@@ -987,6 +999,7 @@ close.addEventListener('click', function (){
               <img src="https://lh3.googleusercontent.com/pw/AP1GczO1odqgTMAmPIM1VF3uWZa1Ln-PtIMxO7yGOQeCCslZryKi8CZ0h2qFw3xp4ww4rKA_7y4yIVNmsZ3R9KDjTW17c7Ero8vpBb7VFwrhtVJeONinUvbbtkGrY8_bhT4R_6W0xM5xKrW3EEsCcJMEyEiP=w536-h991-s-no-gm?authuser=0" style="width: 200px; height: 200px; border-radius: 10px;" 
               onclick="openModal('https://lh3.googleusercontent.com/pw/AP1GczO1odqgTMAmPIM1VF3uWZa1Ln-PtIMxO7yGOQeCCslZryKi8CZ0h2qFw3xp4ww4rKA_7y4yIVNmsZ3R9KDjTW17c7Ero8vpBb7VFwrhtVJeONinUvbbtkGrY8_bhT4R_6W0xM5xKrW3EEsCcJMEyEiP=w536-h991-s-no-gm?authuser=0', 'Strawberry Cheese Cake ₱80', 'This product contains fresh strawberries mixed with cheese cake in a 22oz cup and is especially good for those who have a sweet palate.')">
               <h4>Strawberry Cheesecake</h4>
+              <button>Add to Cart</button>
             </div>
           </div>
 
@@ -1076,6 +1089,22 @@ close.addEventListener('click', function (){
               header.classList.remove("sticky");
             }
           }
+
+          let lastScrollTop = 0;
+
+window.addEventListener("scroll", function() {
+  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (currentScroll > lastScrollTop) {
+    // Scrolling down
+    document.querySelector('.navbar').classList.add('hidden');
+  } else {
+    // Scrolling up
+    document.querySelector('.navbar').classList.remove('hidden');
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+}, false);
           </script>
 
         <script>
